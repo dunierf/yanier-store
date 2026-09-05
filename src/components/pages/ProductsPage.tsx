@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 // Data
@@ -11,11 +10,6 @@ const ProductsPage = () => {
     const { category } = useParams<{ category: string }>();
     const categoryData = data.find(c => c.id === category);
     const items: Product[] = categoryData ? categoryData.items : [];
-
-    useEffect(() => {
-        console.log('Category:', category);
-        console.log(items);
-    }, []);
 
     return (
         <Products items={items} />
