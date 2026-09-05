@@ -1,32 +1,14 @@
+import { categories } from "./categories";
+
 export const items: MenuItem[] = [
     { 
         label: 'Inicio', 
         link: '/' 
     },
-    {
-        label: 'Auriculares',
-        link: 'productos/auriculares'
-    },
-    {
-        label: 'Smartphones',
-        link: 'productos/smartphones'
-    },
-    {
-        label: 'Hogar',
-        link: 'productos/hogar'
-    },
-     {
-        label: 'Ropa',
-        link: 'productos/ropa'
-    },
-    {
-        label: 'Zapatos',
-        link: 'productos/zapatos'
-    },
-    {
-        label: 'Ferretería',
-        link: 'productos/ferreteria'
-    },
+    ...categories.map((category) => ({
+        label: category.name,
+        link: `productos/${category.id}`
+    })),
     {
         label: 'Contacto',
         link: 'contacto'
