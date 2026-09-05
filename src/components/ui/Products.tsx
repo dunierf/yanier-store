@@ -5,9 +5,9 @@ import Product from "./Product";
 
 const Products = (props: ProductsProps) => {
     return (
-        <div className="grid grid-cols-4 gap-5 w-full">
+        <div className="grid grid-cols-12 gap-5 w-full">
             {props.items.map((item) => (
-                <div className="pb-10" key={item.id}>
+                <div className="col-span-12 md:col-span-6 lg:col-span-4 pb-10" key={item.id}>
                     <a href={item.affiliateLink}>
                         <Product item={item} />
                     </a>

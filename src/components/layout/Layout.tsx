@@ -11,7 +11,7 @@ const Layout = () => {
         <Toolbar />
       </div>
       <div className="flex flex-row flex-1">
-        <div>
+        <div className="hidden xl:flex">
           <Sidebar />
         </div>
         <div className="flex-1">
