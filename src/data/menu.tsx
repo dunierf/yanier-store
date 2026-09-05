@@ -1,11 +1,11 @@
-import { categories } from "./categories";
+import { data } from './products';
 
 export const items: MenuItem[] = [
     { 
         label: 'Inicio', 
         link: '/' 
     },
-    ...categories.map((category) => ({
+    ...data.map((category) => ({
         label: category.name,
         link: `productos/${category.id}`
     })),
