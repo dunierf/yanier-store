@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { items } from '../data/menu';
+import { items } from '../../data/menu';
 
 const Menu = () => {
     return (

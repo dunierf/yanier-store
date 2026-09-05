@@ -1,23 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 // Components
-import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
-import Toolbar from "./components/Toolbar";
+import Layout from "./components/layout/Layout";
+
+// Pages
+import HomePage from "./components/pages/HomePage";
+import ContactPage from "./components/pages/ContactPage";
+
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div>
-        <Toolbar />
-      </div>
-      <div className="flex flex-row flex-1">
-        <div>
-          <Sidebar />
-        </div>
-        <div className="flex-1">
-          <Content />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout /> }>
+          <Route index element={<HomePage />} />
+          <Route path="contacto" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
  

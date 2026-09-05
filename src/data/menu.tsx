@@ -4,10 +4,6 @@ export const items: MenuItem[] = [
         link: '/' 
     },
     {
-        label: 'Productos', 
-        link: 'productos'
-    },
-    {
         label: 'Auriculares',
         link: 'productos/auriculares'
     },
@@ -18,6 +14,18 @@ export const items: MenuItem[] = [
     {
         label: 'Hogar',
         link: 'productos/hogar'
+    },
+     {
+        label: 'Ropa',
+        link: 'productos/ropa'
+    },
+    {
+        label: 'Zapatos',
+        link: 'productos/zapatos'
+    },
+    {
+        label: 'Ferretería',
+        link: 'productos/ferreteria'
     },
     {
         label: 'Contacto',
