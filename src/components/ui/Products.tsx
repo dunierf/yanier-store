@@ -8,7 +8,9 @@ const Products = (props: ProductsProps) => {
         <div className="grid grid-cols-4 gap-5 w-full">
             {props.items.map((item) => (
                 <div className="pb-10" key={item.id}>
-                    <Product item={item} />
+                    <a href={item.affiliateLink}>
+                        <Product item={item} />
+                    </a>
                 </div>
             ))}
         </div>
