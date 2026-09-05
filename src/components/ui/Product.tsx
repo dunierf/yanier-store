@@ -1,6 +1,9 @@
 // Types
 import { type Product as ProductType } from "../../data/products";
 
+// Components
+import Rating from "@mui/material/Rating";
+
 const Product = (props: ProductProps) => {
 
     const fakeImages = [
@@ -19,9 +22,7 @@ const Product = (props: ProductProps) => {
             </div>
             <div className="flex flex-row w-full justify-between mt-2">
                 <div>
-                    <h2>
-                        {props.item.rating}
-                    </h2>
+                    <Rating defaultValue={props.item.rating} precision={props.item.rating} readOnly />
                 </div>
                 <div>
                     <h2 className="font-semibold">
