@@ -6,6 +6,7 @@ import Layout from "./components/layout/Layout";
 // Pages
 import HomePage from "./components/pages/HomePage";
 import ContactPage from "./components/pages/ContactPage";
+import ProductsPage from "./components/pages/ProductsPage";
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout /> }>
           <Route index element={<HomePage />} />
+          <Route path="productos/:category" element={<ProductsPage />} />
           <Route path="contacto" element={<ContactPage />} />
         </Route>
       </Routes>

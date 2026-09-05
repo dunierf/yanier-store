@@ -1,7 +1,11 @@
+import { useParams } from 'react-router-dom';
+
 const ProductsPage = () => {
+    const { category } = useParams<{ category: string }>();
+
     return (
         <p>
-            Products
+            { category }
         </p>
     );
 }
