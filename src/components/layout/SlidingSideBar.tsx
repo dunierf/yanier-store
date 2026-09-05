@@ -49,6 +49,7 @@ export type SlidingSidebarProps = {
 const sidebarCss = (open: boolean) : string => {
     return clsx([
         'z-70',
+        'lg:hidden',
         'fixed top-0 left-0 h-full w-75',
         'bg-white border-r-gray-700',
         'shadow-[5px_0_10px_-2px_rgba(0,0,0,0.5)]',
